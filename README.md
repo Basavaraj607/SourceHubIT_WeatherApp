@@ -103,9 +103,6 @@ You can deploy the application using platforms like **Heroku**, **Vercel**, or *
 
 ![Weather Forecast](path/to/forecast-screenshot.png)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
