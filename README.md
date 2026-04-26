@@ -39,7 +39,7 @@ Ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Shaik-Suhail/Weather-Forecasting-Application.git
+git https://github.com/Basavaraj607/SourceHubIT_WeatherApp.git
 cd Weather-Forecasting-Application
 ```
 
@@ -103,9 +103,6 @@ You can deploy the application using platforms like **Heroku**, **Vercel**, or *
 
 ![Weather Forecast](path/to/forecast-screenshot.png)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
