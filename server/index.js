@@ -6,10 +6,18 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Replace 'YOUR_MONGODB_URI' with your actual MongoDB connection URI or use the environment variable
-const MONGODB_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/weatherforecast';
+const DEFAULT_MONGODB_URI = 'mongodb://localhost:27017/weatherforecast';
+const rawMongoUri = process.env.MONGO_URI;
+const hasValidMongoScheme =
+  typeof rawMongoUri === 'string' &&
+  (rawMongoUri.startsWith('mongodb://') || rawMongoUri.startsWith('mongodb+srv://'));
+const MONGODB_URI = hasValidMongoScheme ? rawMongoUri : DEFAULT_MONGODB_URI;
 
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+if (rawMongoUri && !hasValidMongoScheme) {
+  console.warn('Invalid MONGO_URI in .env. Falling back to local MongoDB URI.');
+}
+
+mongoose.connect(MONGODB_URI)
     .then(() => {
         console.log('Connected to MongoDB successfully');
     })

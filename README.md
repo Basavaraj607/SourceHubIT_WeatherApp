@@ -112,4 +112,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [OpenWeatherMap API](https://openweathermap.org/api) for providing weather data.
 - [React.js](https://reactjs.org/) for building the user interface.
 - [Node.js](https://nodejs.org/) for the server-side environment.
-  
+  This project is built with React on the frontend and Node.js/Express on the backend, with MongoDB for storage. It also uses Axios for API calls and the OpenWeatherMap API for weather data.
